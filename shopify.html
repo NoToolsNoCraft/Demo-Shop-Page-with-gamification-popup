@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxuryGlow - Premium Skin Serum</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@headlessui/react@latest/dist/headlessui.umd.js"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-pink-100 via-rose-50 to-yellow-50 p-8 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-5xl font-bold text-pink-700 mb-4">LuxuryGlow</h1>
+      <p class="text-xl text-gray-700 mb-6">Reveal your natural radiance with our best-selling premium skin serum</p>
+      <img src="https://cdn.shopify.com/s/files/1/0009/4260/4340/files/LUXE_SERUM_banner_fa2_1024x1024.jpg?v=1679935799"
+     alt="LuxuryGlow Skin Serum Bottle"
+     class="mx-auto rounded-xl shadow-lg mb-6" />
+
+      <a href="#buy" class="inline-block bg-pink-600 text-white px-6 py-3 rounded-full text-lg shadow hover:bg-pink-700 transition">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-center">
+      <div>
+        <img src="https://img.icons8.com/color/96/natural-food.png" class="mx-auto mb-4" />
+        <h3 class="text-xl font-semibold">All-Natural</h3>
+        <p>Free from harsh chemicals. Gentle on your skin.</p>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/color/96/visible--v1.png" class="mx-auto mb-4" />
+        <h3 class="text-xl font-semibold">Visible Results</h3>
+        <p>Noticeably improved glow in just 2 weeks.</p>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/color/96/warranty-card.png" class="mx-auto mb-4" />
+        <h3 class="text-xl font-semibold">Satisfaction Guaranteed</h3>
+        <p>30-day money-back guarantee if you're not in love.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-rose-50 py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-pink-700 mb-8">What Our Customers Say</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow">
+          <p class="italic">“I’ve tried dozens of serums, but this one is a game changer. My skin is glowing!”</p>
+          <p class="mt-4 font-semibold text-sm">– Ana M., Novi Sad</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <p class="italic">“I noticed improvements within a week. I love the clean ingredients!”</p>
+          <p class="mt-4 font-semibold text-sm">– Jelena S., Belgrade</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buy Now Section -->
+  <section id="buy" class="py-16 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-4">Order Your LuxuryGlow Serum</h2>
+    <p class="mb-6 text-lg text-gray-700">Only 2,490 RSD · Free Shipping</p>
+    <button class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full text-lg shadow transition">
+      Add to Cart
+    </button>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-rose-100">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="bg-white p-4 rounded shadow">
+          <summary class="cursor-pointer font-semibold">Is LuxuryGlow suitable for sensitive skin?</summary>
+          <p class="mt-2 text-gray-700">Yes, it's formulated with natural ingredients perfect for sensitive skin types.</p>
+        </details>
+        <details class="bg-white p-4 rounded shadow">
+          <summary class="cursor-pointer font-semibold">How long does shipping take?</summary>
+          <p class="mt-2 text-gray-700">1-3 business days within Serbia and Croatia.</p>
+        </details>
+        <details class="bg-white p-4 rounded shadow">
+          <summary class="cursor-pointer font-semibold">Can I return the product if I don't like it?</summary>
+          <p class="mt-2 text-gray-700">Of course! We offer a 30-day money-back guarantee.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer class="bg-gray-900 text-white py-8 text-center">
+    <h3 class="text-xl mb-2">Questions? Contact Us</h3>
+    <p class="text-sm">support@luxuryglow.rs · +381 65 123 456</p>
+    <p class="text-xs mt-4">&copy; 2025 LuxuryGlow. All rights reserved.</p>
+  </footer>
+
+  <!-- Memory Game Popup Modal -->
+<div id="memoryGameModal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden">
+  <div class="bg-white p-6 rounded-xl shadow-lg w-full max-w-3xl relative">
+    <button onclick="closeGame()" class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl font-bold">&times;</button>
+
+    <!-- Include the game's HTML here -->
+    <div id="memory-game-container">
+      <!-- Example -->
+      <div class="container">
+    <img src="https://raw.githubusercontent.com/NoToolsNoCraft/retail-puzzle-rotator/refs/heads/main/brand2.webp" alt="Logo" class="logo">
+    <div class="game-board" id="board"></div>
+  </div>
+
+  <!-- New Modal -->
+  <div id="winModal">
+    <div id="winModalContent">
+
+      <a href="https://www.maxi.rs/" target="_blank">
+        <img src="https://raw.githubusercontent.com/NoToolsNoCraft/retail-puzzle-rotator/refs/heads/main/promo.webp" alt="Promotion" class="promo-banner style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); margin-bottom: 16px;">
+      </a>
+
+      <h2>🎉 Awesome! 🎉</h2>
+      <p>You successfully solved the puzzle! Here’s your reward:</p>
+      <p><strong>👉 Coupon: <span style="color:#d9534f;">PUZZLE2025</span> 👈</strong></p>
+      <button onclick="initGame()">🔁 Play Again</button>
+      
+
+      <div id="social-share">
+        <p style="margin-top: 20px;">Share with your friends:</p>
+        <a href="#" id="share-facebook" target="_blank">📘 Facebook</a>
+        <a href="#" id="share-whatsapp" target="_blank">🟢 WhatsApp</a>
+        <a href="#" id="share-viber" target="_blank">🔵 Viber</a>
+        <a href="#" id="share-telegram" target="_blank">📨 Telegram</a>
+      </div>
+    </div>
+  </div>
+        <!-- Cards get rendered here by JS or inline -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Link to the game's CSS + JS -->
+<link rel="stylesheet" href="memory-game.css">
+<script src="memory-game.js" defer></script>
+
+<script>
+  // Show popup after 5 seconds
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('memoryGameModal').classList.remove('hidden');
+    }, 5000);
+  });
+
+  function closeGame() {
+    document.getElementById('memoryGameModal').classList.add('hidden');
+  }
+</script>
+</body>
+</html>
